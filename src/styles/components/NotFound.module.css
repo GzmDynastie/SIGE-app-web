@@ -1,0 +1,91 @@
+/* Contenedor principal */
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #e5e7eb;
+  text-align: center;
+  opacity: 1;
+}
+
+/* Estilo de la imagen */
+.error-image {
+  background-color: #e5e7eb;
+  width: 150px;
+  height: 150px;
+  background-image: url('/images/sige_02.png');
+  /* Asegúrate de cambiar esta ruta */
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  animation: slideIn 1s ease-out forwards;
+}
+
+/* Animación para la imagen (desliza hacia adentro) */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Estilo del texto */
+.error-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  animation: slideInText 1s ease-out forwards;
+}
+
+/* Animación para el texto (desliza hacia adentro) */
+@keyframes slideInText {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Estilo del código de error */
+.error-code {
+  font-family: 'Courier New', monospace;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff4747;
+}
+
+/* Estilo del botón */
+.back-button {
+  background-color: #7597df;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  background-color: #9aaede;
+  color: white;
+}
+
+.back-button:focus {
+  outline: none;
+}

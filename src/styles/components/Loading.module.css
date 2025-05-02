@@ -1,0 +1,52 @@
+  /* Estilos generales para el contenedor */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #e5e7eb;
+}
+
+/* Estilo para el título h2 */
+.title {
+  font-family: monospace;
+  font-size: 40px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  visibility: hidden; /* Inicialmente invisible */
+  animation: fadeInOutText 2s infinite ease-in-out; /* Sincronización */
+}
+
+/* Estilo para la imagen */
+.image {
+  width: 70px;
+  height: 70px;
+  animation: fadeInOutImage 2s infinite ease-in-out; /* Sincronización */
+}
+
+/* Animación para el texto */
+@keyframes fadeInOutText {
+  0%, 100% {
+    visibility: hidden;  /* Invisible */
+    opacity: 0;
+  }
+  50% {
+    visibility: visible; /* Visible en el 50% */
+    opacity: 1;
+  }
+}
+
+/* Animación para la imagen */
+@keyframes fadeInOutImage {
+  0%, 100% {
+    opacity: 0;  /* Invisible */
+  }
+  50% {
+    opacity: 1;  /* Visible en el 50% */
+  }
+}
+
+  

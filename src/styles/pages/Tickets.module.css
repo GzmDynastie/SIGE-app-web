@@ -1,0 +1,39 @@
+/* body {
+    background-color: #e5e7eb;   
+} */
+.body {
+    background-color: #e5e7eb;   
+}
+
+.cont {
+    display: flex;
+    width: 100%;
+}
+
+.container-2 {
+    display: flex;
+    margin: 20px;
+}
+
+.container-3 {
+    margin-right: 20px;
+}
+
+.button-ticketss {
+    margin-left: 20px;
+}
+
+.buttons-ticket {
+    margin-top: 31px;
+    font-size: large;
+}
+
+.button-ticket {
+    margin-top: 13px;
+    font-size: large;
+}
+
+.container-up-area {
+    display: flex;
+    flex-wrap: wrap;
+}

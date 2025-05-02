@@ -1,0 +1,40 @@
+.body {
+    background-color: #e5e7eb;   
+}
+
+.container_master {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hr_classroom {
+    border: 1px solid;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+#container_button button {
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.custom_modal_classroom {
+    max-width: 1400px !important;
+    width: 100%;
+}
+
+.custom_img {
+    display: flex;
+    flex-wrap: wrap;
+}

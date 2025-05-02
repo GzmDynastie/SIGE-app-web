@@ -1,0 +1,102 @@
+/* Contenedor principal */
+.unauthorized-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    opacity: 1;
+    padding: 20px;
+  }
+  
+  /* Estilo de la imagen */
+  .error-image {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 20px;
+    background-image: url("/images/sige_02.png"); /* Asegúrate de cambiar esta ruta */
+    background-size: cover;
+    background-position: center;
+    animation: bounceIn 1s ease-out forwards;
+  }
+  
+  /* Animación para la imagen (rebotando hacia adentro) */
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.3);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Estilo del texto */
+  .error-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #721c24;
+    margin-bottom: 10px;
+    animation: fadeInText 1s ease-out forwards;
+  }
+  
+  /* Animación para el texto (desvaneciendo y deslizándose hacia adentro) */
+  @keyframes fadeInText {
+    0% {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Estilo del código de error */
+  .error-code {
+    font-family: 'Courier New', monospace;
+    font-size: 28px;
+    font-weight: bold;
+    color: #721c24;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+  }
+  
+  /* Estilo del mensaje adicional */
+  .error-message {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #721c24;
+    font-weight: normal;
+    margin-bottom: 30px;
+  }
+  
+  /* Estilo del botón */
+  .back-button {
+    background-color: #7597df;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .back-button:hover {
+    background-color: #9aaede;
+    color: white;
+  }
+  
+  .back-button:focus {
+    outline: none;
+  }
+  
