@@ -3,7 +3,7 @@ import { Modal, Button as Btn, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { getRoleName } from "../types/User";
 import { LogOut } from "lucide-react";
-import { useUser } from "@/hooks/useUser";
+import { useUser } from "../hooks/useUser";
 
 import {
   X,
