@@ -9,6 +9,4 @@ export interface IUserRepository {
 
     loginUser(email: string, password: string): Promise<{ user: User, accessToken: string, refreshToken: string } | null>;
     refreshToken(refreshToken: string): Promise<{ accessToken: string, refreshToken: string } | null>;
-
-    logoutUser(userId: number): Promise<{ message: string } | null>;
 }

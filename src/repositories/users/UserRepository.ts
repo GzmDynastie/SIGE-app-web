@@ -3,7 +3,6 @@ import { User } from "../../types/User";
 
 const API_URL = import.meta.env.VITE_API_USER
 const API_URL_LOGIN = import.meta.env.VITE_API_USER_LOGIN
-const API_URL_LOGOUT = import.meta.env.VITE_API_USER_LOGOUT
 const API_URL_REFRESH = import.meta.env.VITE_API_USER_REFRESH
 
 export class UserRepository implements IUserRepository {
@@ -129,31 +128,4 @@ export class UserRepository implements IUserRepository {
             return null;
         }
     }
-
-    async logoutUser(userId: number): Promise<{ message: string } | null> {
-        try {
-            const accessToken = localStorage.getItem('token');
-    
-            if (!accessToken) {
-                throw new Error('No se encontró el token de acceso.');
-            }
-    
-            const response = await fetch(`${API_URL_LOGOUT}/${userId}`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${accessToken}`
-                },
-                credentials: 'include',
-            });
-    
-            if (!response.ok) throw new Error('Error al cerrar sesión');
-    
-            return await response.json();
-        } catch (error) {
-            console.log('Error logout user:', error);
-            return null;
-        }
-    }
-    
 }
