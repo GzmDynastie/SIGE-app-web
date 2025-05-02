@@ -3,6 +3,7 @@ import { Modal, Button as Btn, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { getRoleName } from "../types/User";
 import { LogOut } from "lucide-react";
+import { useUser } from "@/hooks/useUser";
 
 import {
   X,
@@ -22,6 +23,7 @@ import { useWebSocket, useDeleteNotification } from "../context/NotificationCont
 
 
 export default function Sidebar() {
+  const { logout } = useUser();
   const deleteNotification = useDeleteNotification();
   const { notifications } = useWebSocket();
   const unreadCounts = notifications.length;
@@ -37,6 +39,7 @@ export default function Sidebar() {
   const confirmLogout = () => {
     localStorage.clear();
     setShowLogoutModal(false);
+    logout();
     navigate("/");
   };
 

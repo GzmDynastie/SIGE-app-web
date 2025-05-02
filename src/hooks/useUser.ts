@@ -116,6 +116,34 @@ export function useUser() {
             setLoading(false);
         }
     }
+
+    async function logout() {
+        const user = JSON.parse(localStorage.getItem("user") || "{}");
+        const userId = user.id_user;
+    
+        setLoading(true);
+        setError(null);
+    
+        try {
+            const logoutResponse = await userRepository.logoutUser(userId);
+    
+            if (logoutResponse && logoutResponse.message === "Sesión cerrada correctamente.") {
+                localStorage.removeItem("token");
+                localStorage.removeItem("user");
+    
+                navigate("/");
+                alert("Sesión cerrada correctamente");
+            } else {
+                setError("Error al cerrar sesión");
+            }
+        } catch (err: any) {
+            console.error('Error durante el cierre de sesión:', err);
+            setError(err.message || 'Error al cerrar sesión');
+        } finally {
+            setLoading(false);
+        }
+    }
+    
     
 
     async function refreshToken() {
@@ -158,6 +186,7 @@ export function useUser() {
         updateUser,
         deleteUser,
         loadingUser,
+        logout,
         refreshToken,
         refreshAccessToken,
     };

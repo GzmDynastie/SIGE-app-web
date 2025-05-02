@@ -5,7 +5,7 @@ import "../styles/SignIn.css";
 const SignIn: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { loadingUser, error, loading } = useUser();
+  const { loadingUser, error, loading, logout } = useUser();
 
   const openForm = () => {
     const button = document.getElementById("mainButton");
@@ -26,6 +26,7 @@ const SignIn: React.FC = () => {
   };
 
   useEffect(() => {
+    logout()
     localStorage.clear();
   }, []);
 
